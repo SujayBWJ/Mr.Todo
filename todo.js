@@ -82,3 +82,10 @@ input.addEventListener("keydown", (e) => {
   if (e.key == "Enter") addTodo();
 });
 render();
+
+// for dark mode
+const toggle = document.getElementById("themeToggle");
+
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});

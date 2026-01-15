@@ -95,5 +95,5 @@ console.log("toggle =", toggle);
 
 toggle.addEventListener("click", () => {
   const isDark = document.body.classList.toggle("dark");
-  localStorage.setItem("theme", isDark ? "dark" : "light");
+  localStorage.setItem("theme", isDark ? "dark" : "light"); // localstorage stores the theme before refresh, so the same theme persists even after refresh
 });

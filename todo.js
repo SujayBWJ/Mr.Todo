@@ -1,3 +1,9 @@
+// restore theme immediately
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "dark") {
+  document.body.classList.add("dark");
+}
+
 const input = document.getElementById("todo-input");
 const addBtn = document.getElementById("addBtn");
 const list = document.getElementById("todo-list");
@@ -85,7 +91,9 @@ render();
 
 // for dark mode
 const toggle = document.getElementById("themeToggle");
+console.log("toggle =", toggle);
 
 toggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
+  const isDark = document.body.classList.toggle("dark");
+  localStorage.setItem("theme", isDark ? "dark" : "light");
 });

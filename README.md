@@ -11,6 +11,7 @@ A clean, minimal todo app built with vanilla HTML, CSS, and JavaScript.
 - Theme state persists across refresh  
 - Keyboard support (Enter to add)  
 - Lightweight, no frameworks
+- Alerts when input field is empty
 
 ## How It Works
 

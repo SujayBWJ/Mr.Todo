@@ -97,3 +97,12 @@ toggle.addEventListener("click", () => {
   const isDark = document.body.classList.toggle("dark");
   localStorage.setItem("theme", isDark ? "dark" : "light"); // localstorage stores the theme before refresh, so the same theme persists even after refresh
 });
+if (input.value === "") {
+  input.addEventListener("keydown", (e) => {
+    if (e.key == "Enter") alert("please add a task first ");
+  });
+}
+
+addBtn.addEventListener("click", () => {
+  if (input.value === "") alert("please add a task first ");
+});
